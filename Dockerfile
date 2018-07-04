@@ -1,4 +1,5 @@
-FROM node:alpine AS builder
+FROM alpine
+
 
 WORKDIR /src
 
