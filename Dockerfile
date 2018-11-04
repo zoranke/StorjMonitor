@@ -6,7 +6,7 @@ WORKDIR /src
 RUN apk add --no-cache git  \
                        build-base \
                        python
-RUN git clone https://github.com/calxibe/StorjMonitor.git
+RUN git clone https://github.com/zoranke/StorjMonitor.git
 
 WORKDIR /src/StorjMonitor
 
