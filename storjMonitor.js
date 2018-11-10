@@ -9,7 +9,7 @@ const requestify = require('requestify');
 
 var token = "C7Di34u0CkSLsi8h234UHMbWVT7uXdIjD12PYD4z"; //api token can be create under "Nodes" -> "API-Key"
 var daemon_host= "127.0.0.1"; //where the storj daemon is running
-var daemon_port= 45015; //on which port storj daemon is listening
+var daemon_port= 4000; //on which port storj daemon is listening
 var log = console.log;
 
 console.log = function () {
