@@ -18,7 +18,7 @@ FROM node:alpine
 
 ENV TOKEN 1234
 ENV STORJ_DAEMON storj
-ENV STORJ_PORT 45015
+ENV STORJ_PORT 4000
 
 RUN apk add --no-cache python
 WORKDIR /src
@@ -26,5 +26,5 @@ COPY --from=builder /src/StorjMonitor .
 
 ENTRYPOINT sed -i "s/YOUR-TOKEN-HERE/${TOKEN}/" storjMonitor.js && \
            sed -i "s/127\.0\.0\.1/${STORJ_DAEMON}/" storjMonitor.js && \
-           sed -i "s/45015/${STORJ_PORT}/" storjMonitor.js && \
+           sed -i "s/4000/${STORJ_PORT}/" storjMonitor.js && \
            ./storjMonitor.sh
